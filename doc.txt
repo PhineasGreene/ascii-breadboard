@@ -1,0 +1,13 @@
+    Done:
+1 and 0 movement.
+And and or gates.
+Up and down diodes.
+Not.
+Left and right diodes.
+
+    ?:
+
+    Not Implimented:
+Direction changers.
+Splitters.
+Signal killers.
