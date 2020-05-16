@@ -5,13 +5,13 @@ Up and down diodes.
 Not.
 Left and right diodes.
 North and South Direction Changers
+East and West Direction Changers
 
     ?:
 
     Not Implimented:
-East and West Direction Changers
 Splitters.
 Signal killers.
 Storage.
 Read, write.
-Transistors, switches if needed?
+Transistors, switches if needed ?
