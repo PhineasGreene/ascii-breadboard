@@ -1,10 +1,14 @@
-"use strict";
+/*always*/ "use strict";
 
+//packages
 const fs = require("fs");
 const prompt = require('prompt-sync')({sigint: true});
+
+//load patterns json
 const raw = fs.readFileSync('patterns.json');
 var patterns = JSON.parse(raw).patterns;
 
+//populate patterns with rotated duplicates unless marked as directional
 function rotate(a, j){
     var newArr = [[], [], []];
     
@@ -38,6 +42,8 @@ for(let i = 0; i < l; i++){
     }
 }
 
+
+//some utilities for working on the grid of text
 function read(x, y, arr){
 	return x >= 0 && y >= 0 && y < arr.length && x < arr[y].length ? arr[y][x] : " ";
 };
@@ -97,6 +103,7 @@ function step(arr){
     return newArr;
 };
 
+//load the starting grid from ./test.txt
 var origin=fs.readFileSync('test.txt');
 origin = origin.toString();
 origin = origin.split("\n");
@@ -104,6 +111,7 @@ origin = origin.map(function(x){
     return x.replace('\r', '').split("");
 });
 
+//run the program. this will change when all patterns are added.
 var next = origin;
 while(true){
     print(next);
